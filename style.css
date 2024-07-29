@@ -1,0 +1,152 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section.spacer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    border: 1px solid;
+}
+
+.grid {
+    background: CornflowerBlue no-repeat fixed;
+    background-image: url("landscape.jpg");
+    background-size: cover;
+    position: relative;
+    background-blend-mode: saturation;
+    color: #fff;
+}
+
+.section.--mask {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #000000;
+    z-index: 1000;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, [col] minmax(auto, 160px)) minmax(0px, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.content.--image-right .content__text {
+    grid-column: col/span 4;
+    margin-right: 20px;
+}
+
+.content.--image-right .content__image {
+    grid-column: 6/-1;
+    margin-right: 29px;
+}
+
+@media (min-width: 1200px) {
+    .content.--image-right .content__image {
+        grid-column: 7/-1;
+        margin-right: 129px;
+    }
+}
+
+.content.--image-right-large .content__text {
+    grid-column: col/span 3;
+    margin-right: 20px;
+}
+
+.content.--image-right-large .content__image {
+    grid-column: 5/-1;
+    margin-left: 20px;
+    margin-right: 57px;
+}
+
+.content.--image-left .content__text {
+    grid-column: col 3/span 3;
+    margin-left: 20px;
+}
+
+.content.--image-left .content__image {
+    grid-column: 1/span 3;
+}
+
+@media (min-width: 1200px) {
+    .content.--image-left .content__image {
+        margin-right: 80px;
+        margin-left: 100px;
+    }
+}
+
+.content.--image-full .content__image {
+    grid-column: col/span 6;
+}
+
+.content.--image-overhang {
+    min-height: 700px;
+}
+
+
+
+.content__text {
+    grid-column: col/span 6;
+    grid-row: 1;
+}
+
+.content__text.--center-4-cols {
+    grid-column: col 2/span 4;
+    text-align: center;
+}
+
+.content__image {
+    min-height: 50px;
+    grid-row: 1;
+}
+
+.content__image img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content__image--animate,
+.content__image--animate img {
+    will-change: transform;
+}
+
+.mask__title {
+    z-index: 100;
+}
+
+.mask__title {
+    font-size: 65px;
+    line-height: 1.2;
+    text-align: center;
+    color: #000000;
+    max-width: 20ch;
+    margin: auto;
+}
+
+
+#svg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+}

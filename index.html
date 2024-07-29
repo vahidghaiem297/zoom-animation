@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zoom base on scroll</title>
+</head>
+
+<body>
+    <section class="spacer">
+        <h1>Start Scrolling</h1>
+    </section>
+
+    <div class="grid">
+        <section class="section --mask">
+            <svg id="svg-mask" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <mask id="mask">
+                        <rect width="100%" height="100%" fill="#fff"></rect>
+                        <path id="inner-mask" d="
+                                    M 864.558 485.399
+                                    l 190.884-77.392
+                                    V 353.31
+                                    l -190.884-77.392
+                                    l 123.43 50.043-123.43 50.044
+                                    v 54.697
+                                    z" />
+                    </mask>
+                </defs>
+                <g>
+                    <rect mask="url(#mask)" width="100%" height="100%" fill="#fff"></rect>
+                </g>
+            </svg>
+            <h1 class="mask__title">Title goes here</h1>
+        </section>
+        <section class="section --fixed">
+            <div class="content --image-right-large">
+                <div class="content__text">
+                    <div class="eyebrow gt-Sectra-Regular fs-20 c-purple-2">
+                        Nice Strapline here
+                    </div>
+                    <div class="title fs-24 c-white">
+                        Extra content for the user but not lorem this time around
+                    </div>
+                </div>
+                <div class="content__image content__image--animate o-image-1" data-offset-y="25" data-scrub="0.1">
+                    <div class="content__image-inner">
+                        <img src="landscape.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content --image-right">
+                <div class="content__text">
+                    <div class="fs-40 c-purple-3 fw-semi">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    </div>
+                </div>
+                <div class="content__image content__image--animate o-image-2" data-offset-y="-25" data-scrub="0.1">
+                    <div class="content__image-inner">
+                        <img src="landscape.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content --image-full">
+                <div class="content__image">
+                    <div class="content__image-inner">
+                        <img src="landscape.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content --image-left">
+                <div class="content__text">
+                    <p class="fs-24">Lorem ipsum dolor sit amet, consectetur adipiscing elitullamco</p>
+                    <p class="fs-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco</p>
+                </div>
+                <div class="content__image content__image--animate o-image-3" data-offset-y="12" data-scrub="0.7">
+                    <div class="content__image-inner">
+                        <img src="landscape.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content__text --center-4-cols">
+                    <div class="eyebrow gt-Sectra-Regular fs-20 c-purple-2">
+                        Introducing
+                    </div>
+                    <div class="title fs-65 fw-semi">
+                        Something new and exciting
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content">
+                <div class="content__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi, consectetur cumque
+                    dignissimos eos excepturi expedita maiores modi, molestiae molestias nihil nisi officiis,
+                    perferendis provident quibusdam reprehenderit rerum totam ut?
+                    <br><br><br><br><br><br>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="spacer">
+        <h2>Another Section</h2>
+    </section>
+
+
+
+
+
+    <script src="gsap.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
